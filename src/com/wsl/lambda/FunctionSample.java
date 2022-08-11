@@ -5,7 +5,7 @@ import java.util.function.Function;
 
 //生成定长随机字符串
 public class FunctionSample {
-    public static void main(String[] args) {
+    public static void randomStringFunction(int t) {
         Function<Integer,String> randomString = l -> {
           String chars = "qwertyuioplkjhgfdsazxcvbnm!?1234567890_";
           StringBuffer sb = new StringBuffer();
@@ -16,8 +16,12 @@ public class FunctionSample {
             }
             return sb.toString();
         };
-        String randomStr = randomString.apply(16);
+        String randomStr = randomString.apply(t);
         System.out.println(randomStr);
+    }
+
+    public static void main(String[] args) {
+        randomStringFunction(16);
     }
 
 }
