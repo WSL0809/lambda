@@ -8,5 +8,12 @@ public class LambdaSample {
             return a + b + 0f;
         };
         System.out.println(addition.operate(5,4));
+
+        //2.忽略参数类型
+        Mathop substraction = (a, b) ->{
+            System.out.println("substraction op");
+            return a - b + 0f;
+        };
+        System.out.println(substraction.operate(5,4));
     }
 }
